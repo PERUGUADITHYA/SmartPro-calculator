@@ -1,0 +1,234 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222222; /* dark text for light mode */
+  --card: #ffffff;
+  --button-bg: #f0f0f0;
+  --button-hover: #cbe3ff;
+  --accent: #4285f4;
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --text: #ffffff; /* bright white text for dark mode */
+  --card: #1e1e1e;
+  --button-bg: #2b2b2b;
+  --button-hover: #444;
+  --accent: #8ab4f8;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  transition: background-image 0.5s ease-in-out, color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148810112.jpg');
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-image: url('https://img.freepik.com/free-vector/realistic-3d-black-background_23-2149110296.jpg');
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--card);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  height: 40px;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.slide-in {
+  animation: slideIn 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calculator-section,
+.table-section {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.calculator-section:hover,
+.table-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.display {
+  height: 60px;
+  background: var(--button-bg);
+  border-radius: 10px;
+  text-align: right;
+  padding: 10px 15px; /* Increased horizontal padding */
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  color: var(--text);
+  letter-spacing: 1px; /* Adds space between characters */
+}
+
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--button-bg);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
+}
+
+.equal {
+  background: var(--accent);
+  color: white;
+}
+
+.equal:hover {
+  background: #3367d6;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  background: var(--button-bg);
+  color: var(--text);
+}
+
+.table-output {
+  font-size: 1.2rem;
+  line-height: 2;
+  padding: 20px;
+}
+
+/* Toggle Switch */
+.toggle-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 4px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
