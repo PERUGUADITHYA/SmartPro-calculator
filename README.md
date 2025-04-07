@@ -31,10 +31,10 @@
 ## 📸 Screenshots
 
 ### 🌞 Light Mode
-<img src="screenshots/light-mode.png" width="600"/>
+<img src="Cal1.jpg" width="600"/>
 
 ### 🌙 Dark Mode
-<img src="screenshots/dark-mode.png" width="600"/>
+<img src="cal2.jpg" width="600"/>
 
 ---
 
