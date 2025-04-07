@@ -58,3 +58,31 @@ cd SmartPro-Calculator
 
 # Open in browser
 Open index.html with Live Server or double-click to launch in browser
+
+---
+
+## 🌐 Live Demo
+
+Check out the live project here:  
+🔗 [SmartPro Calculator Live](https://peruguadithya.github.io/SmartPro-calculator/)
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!  
+Feel free to check the [issues page](https://github.com/PERUGUADITHYA/SmartPro-Calculator/issues).
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 🙌 Support
+
+If you find this project helpful, please ⭐ it!  
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/peruguadithya).
+
